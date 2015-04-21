@@ -27,9 +27,6 @@ var demoBB = {
 		}
 };
 
-Backbone.View.prototype.close = function(){
-	
-}
 
 demoBB.Router = Backbone.Router.extend({
 	routes:{
@@ -46,16 +43,16 @@ demoBB.Router = Backbone.Router.extend({
 	},
 	addEmployee : function(){
 		console.log('router add');
-		//if(!demoBB.view.employeeAdd){
+		if(!demoBB.view.employeeAdd){
 			demoBB.view.employeeAdd = new demoBB.View.EmployeeAdd();			
-		//}
+		}
 		demoBB.view.employeeAdd.render();
 	},
 	editEmployee : function(id){
 		console.log('router edit: '+ id);
-		//if(!demoBB.view.employeeEdit){
-			demoBB.view.employeeAdd = new demoBB.View.EmployeeEdit();			
-		//}
-		demoBB.view.employeeAdd.fetchData(id);
-	}	
+		if(!demoBB.view.employeeEdit){
+			demoBB.view.employeeEdit = new demoBB.View.EmployeeEdit();			
+		}
+		demoBB.view.employeeEdit.fetchData(id);
+	}
 });

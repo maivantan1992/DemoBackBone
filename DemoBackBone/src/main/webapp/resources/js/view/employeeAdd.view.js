@@ -2,7 +2,7 @@ demoBB.View.EmployeeAdd = Backbone.View.extend({
 	el : '#view',
 	events : {
 		'click #clear' : 'clear',
-		'click #save' : 'addEmployee',
+		'click #saveAdd' : 'addEmployee',
 		'click #backToList' : 'backToList',	
 		'keydown' : 'onKeypress'
 	},
@@ -16,7 +16,7 @@ demoBB.View.EmployeeAdd = Backbone.View.extend({
 	},
 	close : function(){
 		console.log('close');
-		//this.undelegateEvents();
+		this.undelegateEvents();
 		//this.remove();		
 		//this.unbind();
 		//this.stopListening();

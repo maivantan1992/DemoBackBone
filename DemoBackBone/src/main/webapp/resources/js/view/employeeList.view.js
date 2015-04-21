@@ -16,9 +16,8 @@ demoBB.View.EmployeeList = Backbone.View.extend({
 		return this;
 	},
 	close : function(){
-		//console.log('close');
+		console.log('close');
 		//this.remove();	
-		this.close1()
 	},
 	addEmployee: function(){
 		this.close();

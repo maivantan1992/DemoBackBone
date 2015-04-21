@@ -1,0 +1,21 @@
+<!--  <div id="view"> -->
+	<button id="add">Add</button>
+	<table>
+		<tr>
+			<th>No.</th>
+			<th>Name</th>
+			<th>Email</th>
+			<th>Edit</th>
+			<th>Delete</th>									
+		</tr>		
+		<% _.each(employees, function(employee)  { %>
+		<tr>
+			<td><%= employee.id %></td>
+			<td><%= employee.name %></td>
+			<td><%= employee.email %></td>
+			<td><button class="edit" id="<%= employee.id %>">Edit</button></td>			
+			<td><button class="delete" id="<%= employee.id %>">Delete</button></td>			
+		</tr>
+		<% }); %>					
+	</table>
+<!-- </div> -->

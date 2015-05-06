@@ -25,8 +25,8 @@ demoBB.View.EmployeeEdit = Backbone.View.extend({
 		return this;
 	},
 	close : function(){
-		console.log('close');
-		this.undelegateEvents();
+		console.log('edit close');
+		//this.undelegateEvents();
 		//this.remove();		
 		//this.unbind();
 		//this.stopListening();

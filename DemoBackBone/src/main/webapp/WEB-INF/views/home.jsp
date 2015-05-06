@@ -2,8 +2,12 @@
 <%@ page session="false" %>
 <html>
 <head>
-	<link rel="text/stylesheet" href="resources/css/style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css">
+	<link rel="stylesheet" href="resources/css/style.css">
+	
 	<script type="text/javascript" src="resources/js/lib/jquery-2.1.3.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js"></script>
+	
 	<script type="text/javascript" src="resources/js/lib/underscore-min.js"></script>
 	<script type="text/javascript" src="resources/js/lib/backbone-min.js"></script>
 	<script type="text/javascript" src="resources/js/util.js"></script>

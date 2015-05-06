@@ -1,5 +1,6 @@
 <!-- <div id="view"> -->
-	<button id="backToList">Back to list</button>
+	<!-- <button id="backToList">Back to list</button> -->
+	<a id="backToList" class="waves-effect waves-light btn"><i class="mdi-navigation-arrow-back left"></i>Back</a>
 	<table>
 	<tr>
 		<td>Id</td>
@@ -14,8 +15,14 @@
 		<td><input type="text" id="email" name="email" value="<%= employee.email %>"></td>
 	</tr>
 	<tr>
-		<td><button id="clear">Clear</button></td>
-		<td><button id="saveEdit">Save</button></td>
+		<td>
+			<!-- <button id="clear">Clear</button> -->
+			<button id="clear" class="btn waves-effect waves-light">Clear</button>
+		</td>
+		<td>
+			<!-- <button id="saveEdit">Save</button> -->
+			<button id="saveEdit" class="btn waves-effect waves-light">Save<i class="mdi-content-send right"></i></button>
+		</td>
 	</tr>
 	<tr>
 		<td colspan="2"><span id="status"></span></td>

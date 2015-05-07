@@ -20,13 +20,13 @@ public class EmployeeController {
 	@Autowired
 	EmployeeService employeeService;
 
-	@RequestMapping(value = "", method = {RequestMethod.POST})
+	@RequestMapping(method = {RequestMethod.POST})
 	@ResponseBody
 	public Employee add(@RequestBody Employee employee) {
 		return employeeService.save(employee);	
 	}
 	
-	@RequestMapping(value = "")
+	@RequestMapping()
 	@ResponseBody
 	public List<Employee> list() {
 		return employeeService.findAll();

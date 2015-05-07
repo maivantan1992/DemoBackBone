@@ -1,32 +1,27 @@
-<!--  <div id="view"> -->
-	<!-- <button id="add2">Add</button> -->
-	<a id="add" class="btn-floating btn-large waves-effect waves-light red"><i class="mdi-content-add"></i>Add</a>
-	<table class="hoverable">
-		<thead>
-			<tr>
-				<th>No.</th>
-				<th>Name</th>
-				<th>Email</th>
-				<th>Edit</th>
-				<th>Delete</th>									
-			</tr>
-		</thead>	
-		<tbody>	
-			<% _.each(employees, function(employee)  { %>
-			<tr>
-				<td><%= employee.id %></td>
-				<td><%= employee.name %></td>
-				<td><%= employee.email %></td>
-				<td>
-					<!-- <button class="edit" id="<%= employee.id %>">Edit</button> -->
-					<a id="<%= employee.id %>"" class="edit waves-effect waves-light btn"><i class="mdi-editor-mode-edit"></i></a>					
-				</td>			
-				<td>
-					<!-- <button class="delete" id="<%= employee.id %>">Delete</button> -->
-					<a id="<%= employee.id %>"" class="delete waves-effect waves-light btn"><i class="mdi-action-delete"></i></a>
-				</td>			
-			</tr>
-			<% }); %>	
-		</tbody>				
-	</table>
-<!-- </div> -->
+<a id="add" class="btn-floating btn-large waves-effect waves-light red"><i class="mdi-content-add"></i>Add</a>
+<table class="hoverable">
+	<thead>
+		<tr>
+			<th>No.</th>
+			<th>Name</th>
+			<th>Email</th>
+			<th>Edit</th>
+			<th>Delete</th>									
+		</tr>
+	</thead>	
+	<tbody>	
+		<% _.each(employees, function(employee)  { %>
+		<tr>
+			<td><%= employee.id %></td>
+			<td><%= employee.name %></td>
+			<td><%= employee.email %></td>
+			<td>
+				<a id="<%= employee.id %>" class="edit waves-effect waves-light btn"><i class="mdi-editor-mode-edit"></i></a>					
+			</td>			
+			<td>
+				<a id="<%= employee.id %>" class="delete waves-effect waves-light btn"><i class="mdi-action-delete"></i></a>
+			</td>			
+		</tr>
+		<% }); %>	
+	</tbody>				
+</table>

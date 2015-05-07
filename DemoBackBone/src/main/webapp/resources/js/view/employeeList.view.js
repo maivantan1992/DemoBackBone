@@ -14,17 +14,11 @@ demoBB.View.EmployeeList = Backbone.View.extend({
 		console.log('list render');
 		this.$el.html(this.template({employees : this.collection.toJSON()}));
 		return this;
-	},
-	close : function(){
-		console.log('list close');
-		//this.remove();	
-	},
+	},	
 	addEmployee: function(){
-		this.close();
 		demoBB.router.navigate('add', true);
 	},
 	editEmployee: function(e){		
-		this.close();
 		var employeeId = e.currentTarget.id;
 		demoBB.router.navigate('edit/' + employeeId, true);
 	},

@@ -11,10 +11,7 @@ demoBB.View.EmployeeEdit = Backbone.View.extend({
 		this.model = new demoBB.Model.Employee();
 		this.model.on('sync', this.render, this);
 	    this.$el.on('destroyed', this.removeHandler);
-	},
-	removeHandler : function(){
-		console.log('on remove handler');
-	},
+	},	
 	fetchData : function(id){
 		this.model.set('id', id);
 		this.model.fetch();
@@ -23,16 +20,8 @@ demoBB.View.EmployeeEdit = Backbone.View.extend({
 		console.log('edit render');
 		this.$el.html(this.template({employee : this.model.toJSON()}));
 		return this;
-	},
-	close : function(){
-		console.log('edit close');
-		//this.undelegateEvents();
-		//this.remove();		
-		//this.unbind();
-		//this.stopListening();
-	},
+	},	
 	backToList : function(){
-		this.close();
 		demoBB.router.navigate('home', true);
 	},
 	clear : function(){

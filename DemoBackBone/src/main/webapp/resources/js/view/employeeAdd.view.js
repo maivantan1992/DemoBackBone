@@ -14,24 +14,17 @@ demoBB.View.EmployeeAdd = Backbone.View.extend({
 		this.$el.html(this.template({}));
 		return this;
 	},
-	close : function(){
-		console.log('add close');
-		//this.undelegateEvents();
-		//this.remove();		
-		//this.unbind();
-		//this.stopListening();
-	},
 	clear : function(){
 		console.log('clear add');
-		this.$el.find('#name').val('');
+		this.$el.find('#name').val('').focus();
 		this.$el.find('#email').val('');
 	},
 	backToList : function(){
-		this.close();
 		demoBB.router.navigate('home', true);
 	},	
 	addEmployee : function(){
 		console.log('add save');
+		var self = this;
 		var name = this.$el.find('#name');
 		var email = this.$el.find('#email');
 		var status = this.$el.find('#status');
@@ -42,9 +35,7 @@ demoBB.View.EmployeeAdd = Backbone.View.extend({
 		newEmployee.save(null, {
 		    success: function (model, response) {
 		    	status.text("Add success!");
-		    	name.val('');
-		    	email.val('');
-		    	name.focus();
+		    	self.clear();
 		    },
 		    error: function (model, response) {
 		        status.text("Error!");
